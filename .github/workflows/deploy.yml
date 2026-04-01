@@ -1,15 +1,17 @@
-name: TESTE
+name: Deploy Automático
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Teste
-        run: echo "FUNCIONANDO 🚀"
+      - name: Disparar webhook n8n
+        run: |
+          curl -X POST  https://01ab-2804-3b04-a008-ab00-4c1b-200b-3a93-c9cf.ngrok-free.app/webhook/deploy \
+          -H "Content-Type: application/json" \
+          -d '{"status":"deploy iniciado"}'
