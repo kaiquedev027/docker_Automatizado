@@ -1,17 +1,15 @@
-name: Deploy
+name: TESTE
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
       - name: Teste
-        run: echo "Workflow funcionando 🚀"
+        run: echo "FUNCIONANDO 🚀"
