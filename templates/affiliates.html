@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Afiliados</title>
+</head>
+<body>
+    <h1>Adicionar Produto de Afiliado</h1>
+    <form method="POST" action="{{ url_for('affiliates') }}">
+        <input type="text" name="product_name" placeholder="Nome do Produto" required><br>
+        <input type="url" name="affiliate_link" placeholder="Link de Afiliado" required><br>
+        <button type="submit">Adicionar Produto de Afiliado</button>
+    </form>
+
+    <h2>Produtos de Afiliados</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.product_name }} - <a href="{{ product.affiliate_link }}" target="_blank">{{ product.affiliate_link }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('admin') }}">Voltar para Admin</a>
+</body>
+</html>

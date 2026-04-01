@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de Email em Massa</title>
+</head>
+<body>
+    <h1>Enviar Email para Todos os Inscritos</h1>
+    <form method="POST" action="{{ url_for('send_mass_email') }}" enctype="multipart/form-data">
+        <label for="title">Título do Email:</label><br>
+        <input type="text" name="title" id="title" required><br><br>
+
+        <label for="message">Texto do Email:</label><br>
+        <textarea name="message" id="message" required></textarea><br><br>
+
+        <label for="image">Imagem do Email (opcional):</label><br>
+        <input type="file" name="image" id="image" accept="image/*"><br><br>
+
+        <button type="submit">Enviar Email</button>
+    </form>
+</body>
+</html>

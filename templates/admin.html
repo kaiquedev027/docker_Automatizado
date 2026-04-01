@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Publicações</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <h1>Painel de Publicação</h1>
+    <div class="adm">
+        <form method="POST" action="{{ url_for('admin') }}" enctype="multipart/form-data">
+            <input class="tit" type="text" name="title" placeholder="Título" required><br><br>
+            <textarea class="text" name="content" placeholder="Conteúdo" required></textarea><br><br>
+            <input type="file" name="image" accept="image/*"><br><br>
+            <input type="datetime-local" name="scheduled_time" required><br><br>
+            <div class="btpost">
+                <button class="btp" type="submit">Postar Publicação</button>
+            </div>
+        </form>
+    </div>
+
+    <h2>Publicações Agendadas</h2>
+    <div class="adm">
+        <ul>
+            {% for post in posts %}
+            <div class="publi">
+                <li>{{ post.title }} - {{ post.scheduled_time }} - {{ 'Publicado' if post.posted else 'Agendado' }}</li>
+            </div>
+            <a class="edit" href="{{ url_for('edit', id=post.id) }}">Editar</a>
+            <form action="{{ url_for('delete', id=post.id) }}" method="POST" style="display:inline;">
+                <button class="exc" type="submit">Excluir</button>
+            </form>
+            {% endfor %}
+        </ul>
+        
+         <!-- Link para a página de gestão de afiliados -->
+        <a href="{{ url_for('affiliates') }}">Gestão de Afiliados</a>
+</body>
+
+</html>

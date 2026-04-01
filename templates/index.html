@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Conteudos</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+</head>
+
+<body>
+    <header>
+        <div class="logaqui">
+            <img class="logoaqui" src="static/logoaqui.png" alt="">
+        </div>
+        <nav>
+            <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <div class="nav-links">
+                    <div class="sidebar-logo">
+                        <span class="logo-name"></span>
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <ul class="links">
+                        <li><a href="/">HOME</a></li>
+                        <li>
+                            <a href="/sobre">SOBRE NOS</a>
+                        </li>
+                        <li>
+                            <a href="/contato">CONTATO</a>
+                        </li>
+                        <li><a href="/politica">POLITICA DE PRIVACIDADE</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="pub">
+        <h1>Publicações</h1>
+    </div>
+    {% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        {% if post.image_url %}
+        <div class="imgp">
+            <img class="imgpost" src="{{ post.image_url }}" alt="Imagem da publicação">
+        </div>
+        {% endif %}
+        <div class="paragrafo">
+            <p>{{ post.content }}</p>
+            <small>Publicado em: {{ post.scheduled_time }}</small>
+        </div>
+    </div>
+    {% endfor %}
+    <div id="newsletterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Inscreva-se na Nossa Newsletter</h2>
+            <p>Receba atualizações sobre nossas últimas publicações diretamente no seu e-mail.</p>
+            <a class="news" href="{{ url_for('subscribe') }}">Inscreva-se na Newsletter</a>
+        </div>
+    </div>
+    <div class="pages">
+                
+                {% if posts.has_prev %}
+                    <div class="pags">
+                        <a href="{{ url_for('index', page=posts.prev_num) }}">Anterior</a>
+                    </div>
+                {% endif %}
+                {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                    {% if page_num %}
+                        {% if page_num == posts.page %}
+                            <div class="pags">
+                                <strong>{{ page_num }}</strong>
+                            </div>
+                        {% else %}
+                            <div class="pags"> 
+                                <a href="{{ url_for('index', page=page_num) }}">{{ page_num }}</a>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                    {% endif %}
+                {% endfor %}
+                {% if posts.has_next %}
+                    <div class="pags">
+                        <a href="{{ url_for('index', page=posts.next_num) }}">Próxima</a>
+                    </div>
+                {% endif %}
+    </div>
+    <footer>
+        <p>© 2024 Sua Marca Aqui. Todos os direitos reservados.</p>
+    </footer>
+    <script src="static/menu.js"></script>
+    <script src="static/newsletter.js"></script>
+</body>
+
+</html>

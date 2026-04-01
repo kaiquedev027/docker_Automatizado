@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Publicação</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <h1>Editar Publicação</h1>
+    <div class="adm">
+        <form method="POST" action="{{ url_for('edit', id=post.id) }}" enctype="multipart/form-data">
+            <input class="tit" type="text" name="title" value="{{ post.title }}" required><br><br>
+            <textarea class="text" name="content" required>{{ post.content }}</textarea><br><br>
+            <input type="file" name="image" accept="image/*"><br><br>
+            <input type="datetime-local" name="scheduled_time"
+                value="{{ post.scheduled_time.strftime('%Y-%m-%dT%H:%M') }}" required><br><br>
+            <div class="btpost">
+                <button class="btp" type="submit">Salvar Alterações</button>
+            </div>
+        </form>
+        <div class="btpost">
+            <a class="volt" href="{{ url_for('admin') }}">Voltar</a>
+        </div>
+    </div>
+</body>
+
+</html>
