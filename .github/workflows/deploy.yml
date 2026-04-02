@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Disparar webhook n8n
         run: |
-          curl -X POST  https://01ab-2804-3b04-a008-ab00-4c1b-200b-3a93-c9cf.ngrok-free.app/webhook/deploy \
+          curl -X POST  https://www.retrogamesonline.com.br/webhook/deploy \
           -H "Content-Type: application/json" \
           -d '{"status":"deploy iniciado"}'

@@ -232,6 +232,13 @@ def index():
     posts = Post.query.filter_by(posted=True).order_by(Post.scheduled_time.desc()).paginate(page=page, per_page=POSTS_PER_PAGE)
     return render_template('index.html', posts=posts)
 
+@app.route('/teste')
+def teste():
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.filter_by(posted=True).order_by(Post.scheduled_time.desc()).paginate(page=page, per_page=POSTS_PER_PAGE)
+    return render_template('index.html', posts=posts)
+
+
 
 @app.route('/subscribe', methods=['GET', 'POST'])
 def subscribe():
