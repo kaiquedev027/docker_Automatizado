@@ -1,223 +1,215 @@
-🚀 Deploy Automatizado com Docker + n8n + Monitoramento
-📌 1. Visão Geral
+# 🚀 Deploy Automatizado com Docker + n8n + Monitoramento
 
-Este projeto implementa um sistema completo de:
+Sistema completo de CI/CD com deploy automatizado, monitoramento e notificações em tempo real.
 
-CI/CD automatizado
-Deploy via Docker
-Execução via webhook (n8n)
-Monitoramento contínuo
-Notificações em múltiplos canais
-Auto recuperação de containers (self-healing)
+---
 
-📍 Baseado no fluxo apresentado ao longo do PDF (principalmente páginas 34, 46 e 50).
+## 📌 Visão Geral
 
-🧱 2. Estrutura do Projeto
+Este projeto implementa:
 
-📄 Conforme página 2:
+- Deploy automático via GitHub Actions
+- Automação com n8n
+- Containerização com Docker
+- Monitoramento contínuo
+- Notificações (Slack, Discord, Email, Telegram)
+- Auto-restart de containers
 
-O projeto segue uma estrutura organizada contendo:
+---
 
-.github/workflows/ → pipeline CI/CD
-app.py → aplicação principal
-Dockerfile → build da imagem
-docker-compose.yml → orquestração
-requirements.txt → dependências Python
-templates/ e static/ → frontend
-README.md → documentação
+## 🧱 Estrutura do Projeto
 
-👉 Estrutura pensada para deploy simples e escalável.
+📷 **Estrutura do projeto (Página 2)**  
+![Estrutura](./docs/estrutura.png)
 
-⚙️ 3. Pipeline CI/CD (GitHub Actions)
 
-📄 Página 3
 
-O pipeline automatiza:
+---
 
-Checkout do código
-Setup do ambiente Python
-Instalação de dependências
-Execução de testes
-Disparo de webhook para deploy
-🔁 Fluxo
-git push → GitHub Actions → Webhook → n8n → Deploy Docker
-📌 Destaque importante
+## ⚙️ CI/CD com GitHub Actions
 
-O deploy não acontece direto no GitHub —
-ele é delegado ao n8n, permitindo automação avançada.
+📷 **Pipeline GitHub (Página 3)**  
+![Pipeline](./docs/github-actions.png)
 
-🐳 4. Containerização com Docker
+### Fluxo
 
-📄 Página 4
 
-Dockerfile
-Base: python:3.12-slim
-Diretório: /app
-Instala dependências via pip
-Expõe porta 8024
-Executa app.py
-📌 Vantagens
-Build leve
-Ambiente padronizado
-Fácil replicação
-📦 5. Docker Compose
+---
 
-📄 Página 5
+## 🐳 Docker
 
-Responsável por:
+📷 **Dockerfile (Página 4)**  
+![Dockerfile](./docs/dockerfile.png)
 
-Subir containers automaticamente
-Definir serviços
-Facilitar deploy local e produção
-🌐 6. Exposição com Cloudflare Tunnel
+### Descrição
 
-📄 Página 9
+- Imagem base Python
+- Instala dependências
+- Executa aplicação
 
-O projeto utiliza Cloudflare Tunnel para:
+---
 
-Expor o n8n/public endpoint
-Evitar necessidade de IP público
-Garantir segurança via Cloudflare
-🔗 Configuração
-Domínio configurado: retrogamesonline.com.br
-Rota → /webhook/deploy
-Serviço → http://127.0.0.1:5678
-🔐 7. Variáveis de Ambiente
+## 📦 Docker Compose
 
-📄 Página 10
+📷 **Docker Compose (Página 5)**  
+![Docker Compose](./docs/docker-compose.png)
 
-Configuradas para:
+Responsável por subir e gerenciar os containers.
 
-URL do webhook
-Integrações externas
-Scripts de deploy
+---
+
+## 🌐 Cloudflare Tunnel
+
+📷 **Configuração Tunnel (Página 9)**  
+![Cloudflare](./docs/cloudflare.png)
+
+- Expõe serviço local
+- Evita uso de IP público
+- Usado para webhook do GitHub
+
+---
+
+## 🔐 Variáveis de Ambiente
+
+📷 **Variáveis (Página 10)**  
+![Env](./docs/env.png)
 
 Exemplo:
 
-WEBHOOK_URL=https://seu-dominio/webhook/deploy
 
-Também há alias para facilitar deploy via git:
+---
 
-git deploy
-🔗 8. Integração com GitHub Webhook
+## 🔗 Configuração Webhook GitHub
 
-📄 Páginas 6–8
+📷 **Webhook GitHub (Páginas 6–8)**  
+![Webhook](./docs/github-webhook.png)
 
-Passos realizados:
+- Método: POST
+- Evento: Push
+- URL → n8n
 
-Acessar Settings do repositório
-Criar Webhook
-Configurar:
-URL: endpoint do n8n
-Método: POST
-Evento: push
+---
 
-📌 Importante:
-O workflow precisa estar ativo no n8n.
+## 🤖 Workflow de Deploy (n8n)
 
-🤖 9. Automação com n8n
+📷 **Workflow completo (Página 34)**  
+![Deploy Workflow](./docs/workflow-deploy.png)
 
-📄 Página 34 (principal)
+### Etapas:
 
-🔥 Workflow de Deploy
-
-Fluxo completo:
-
-Webhook Trigger
-Execução de comandos Docker
-Verificação do container
-Envio de notificações
-⚙️ Etapas detalhadas
 1. Webhook
-
-Recebe requisição do GitHub
-
 2. Deploy Docker
-
-Executa comandos como:
-
-docker-compose down
-docker-compose up -d --build
-3. Check Container
-
-Valida se o container está rodando
-
+3. Verificação
 4. Notificações
 
-Dispara mensagens para múltiplos canais
+---
 
-📢 10. Sistema de Notificações
-💬 Slack
+## 📢 Notificações
 
-📄 Páginas 12–19
+---
 
-Criação de App
-Ativação de Incoming Webhook
-Geração de URL
+### 💬 Slack
 
-✔ Usado para alertas de deploy
+📷 **Configuração Slack (Páginas 12–19)**  
+![Slack](./docs/slack.png)
 
-🎮 Discord
+- Incoming Webhook
+- Alertas de deploy
 
-📄 Páginas 20–25
+---
 
-Configuração de Webhook por canal
-Integração direta com n8n
+### 🎮 Discord
 
-✔ Ideal para notificações rápidas
+📷 **Configuração Discord (Páginas 20–25)**  
+![Discord](./docs/discord.png)
 
-📧 Email SMTP
+- Webhook por canal
+- Notificações em tempo real
 
-📄 Páginas 26–30
+---
 
-Configuração via Gmail:
+### 📧 Email SMTP
 
-Ativar verificação em duas etapas
-Criar senha de app
-Configurar SMTP no n8n
+📷 **Configuração SMTP (Páginas 26–30)**  
+![SMTP](./docs/smtp.png)
 
-✔ Envio de alertas formais
+- Gmail + senha de app
+- Envio automático de emails
 
-📱 Telegram
+---
 
-📄 Páginas 31–33
+### 📱 Telegram
 
-Criação de bot via BotFather
-Geração de token
-Integração via API
+📷 **Bot Telegram (Páginas 31–33)**  
+![Telegram](./docs/telegram.png)
 
-✔ Notificação direta no celular
+- Bot criado via BotFather
+- Notificações diretas
 
-📊 11. Monitoramento de Containers
+---
 
-📄 Página 46
+## 📊 Monitoramento de Containers
 
-Workflow de Monitoramento
+📷 **Workflow Monitoramento (Página 46)**  
+![Monitoramento](./docs/monitoramento.png)
 
-Executa periodicamente:
+Executa:
 
-docker ps
-docker logs
-docker stats
-🔁 Estrutura
-Schedule Trigger → Docker Command → Notificação
+- docker ps
+- docker logs
+- docker stats
 
-✔ Monitoramento contínuo
-✔ Visibilidade operacional
+---
 
-🔄 12. Auto Healing (Restart Automático)
+## 🔄 Auto Healing (Restart automático)
 
-📄 Página 50
+📷 **Workflow Restart (Página 50)**  
+![Restart](./docs/restart.png)
 
-Workflow
-Verifica status do container
-Se estiver parado:
-→ executa start
-Se estiver rodando:
-→ não faz nada
-🧠 Lógica
-IF container == stopped → start
-ELSE → no-op
+### Lógica:
 
-✔ Alta disponibilidade
-✔ Redução de downtime
+
+---
+
+## 🚀 Fluxo Completo
+
+
+
+---
+
+## 🧠 Tecnologias Utilizadas
+
+- Docker
+- Docker Compose
+- GitHub Actions
+- n8n
+- Cloudflare Tunnel
+- Python
+- Slack API
+- Discord Webhooks
+- Telegram Bot
+- SMTP (Gmail)
+
+---
+
+## 📈 Benefícios
+
+- Deploy automatizado
+- Alta disponibilidade
+- Monitoramento contínuo
+- Alertas em tempo real
+
+---
+
+## 📌 Melhorias Futuras
+
+- Kubernetes
+- Prometheus + Grafana
+- Logs centralizados
+- CI/CD avançado com Buildx
+
+---
+
+## 👨‍💻 Autor
+
+Kaique Alves Fernandes
