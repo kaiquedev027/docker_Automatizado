@@ -301,9 +301,7 @@ Executa:
 ---
 
 ## 🔄 Auto Healing (Restart automático)
-
-📷 **Workflow Restart (Página 50)**  
-![Restart](./docs/restart.png)
+![Restart](./docs/WorkflowRestartDocker.png)
 
 ### Lógica:
 
