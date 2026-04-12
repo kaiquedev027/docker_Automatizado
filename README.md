@@ -64,16 +64,26 @@ Este projeto implementa:
               curl -X POST https://www.retrogamesonline.com.br/webhook/deploy
 ```
 
-![Pipeline](./docs/DeployGithub.png)
-
 ### Fluxo
 
 
 ---
 
 ## 🐳 Docker
+```bash
+FROM python:3.12-slim
 
-![Dockerfile](./docs/Dockerfile03.png)
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 8024
+
+CMD ["python", "app.py"]
+```
+
 
 ### Descrição
 
