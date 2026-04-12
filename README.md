@@ -27,7 +27,6 @@ Este projeto implementa:
 
 ## ⚙️ CI/CD com GitHub Actions
 
-📷 **Pipeline GitHub (Página 3)**  
 ![Pipeline](./docs/DeployGithub.png)
 
 ### Fluxo
