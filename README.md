@@ -119,8 +119,8 @@ services:
 
 ## 🔐 Variáveis de Ambiente
 
-📷 **Variáveis (Página 10)**  
-![Env](./docs/env.png)
+![Env](./docs/VariavelDominioN8N.png)
+![Env](./docs/VariavelGithubDeploy.png)
 
 Exemplo:
 
