@@ -132,15 +132,19 @@ Exemplo:
 ## 🔗 Configuração Webhook GitHub
 
 Passo 01:
+
 ![Webhook](./docs/GitHub01.png)
 
 Passo 02:
+
 ![Webhook](./docs/GitHub02.png)
 
 Passo 03:
+
 ![Webhook](./docs/GitHub03.png)
 
 Passo 04:
+
 ![Webhook](./docs/GitHub04.png)
 
 - Método: POST
@@ -197,7 +201,7 @@ Passo 07:
 
 Passo 08: 
 
-![Slack](./docs/Slack09.png)
+![Slack](./docs/Slack08.png)
 
 
 - Incoming Webhook
