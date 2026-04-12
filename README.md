@@ -271,9 +271,17 @@ Passo 05:
 ---
 
 ### 📱 Telegram
+Passo 01:
 
-📷 **Bot Telegram (Páginas 31–33)**  
-![Telegram](./docs/telegram.png)
+![Telegram](./docs/Telegram01.png)
+
+Passo 02:
+
+![Telegram](./docs/Telegram02.png)
+
+Passo 03:
+
+![Telegram](./docs/Telegram03.png)
 
 - Bot criado via BotFather
 - Notificações diretas
