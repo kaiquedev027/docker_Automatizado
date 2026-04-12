@@ -317,4 +317,4 @@ def politica():
     return render_template('politica.html')
 
 if __name__ == "__main__":
-   app.run(host="192.168.0.109", port=8024)
+   app.run(host="0.0.0.0", port=8024)
