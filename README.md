@@ -109,7 +109,6 @@ services:
 
 ## 🌐 Cloudflare Tunnel
 
-📷 **Configuração Tunnel (Página 9)**  
 ![Cloudflare](./docs/Cloudflared.png)
 
 - Expõe serviço local
