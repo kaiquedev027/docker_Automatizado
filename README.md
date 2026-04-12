@@ -155,8 +155,7 @@ Passo 04:
 
 ## 🤖 Workflow de Deploy (n8n)
 
-📷 **Workflow completo (Página 34)**  
-![Deploy Workflow](./docs/workflow-deploy.png)
+![Deploy Workflow](./docs/WorkflowDeploy.png)
 
 ### Etapas:
 
