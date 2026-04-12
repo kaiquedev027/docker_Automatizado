@@ -118,8 +118,10 @@ services:
 ---
 
 ## 🔐 Variáveis de Ambiente
-
+Definindo Variavel para Fixar o Dominio no N8N:
 ![Env](./docs/VariavelDominioN8N.png)
+
+Definindo Variavel para Executar somente Comando Git Deploy
 ![Env](./docs/VariavelGithubDeploy.png)
 
 Exemplo:
