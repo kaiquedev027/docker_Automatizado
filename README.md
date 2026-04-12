@@ -289,8 +289,7 @@ Passo 03:
 
 ## 📊 Monitoramento de Containers
 
-📷 **Workflow Monitoramento (Página 46)**  
-![Monitoramento](./docs/monitoramento.png)
+![Monitoramento](./docs/WorkflowPsLogsStats.png)
 
 Executa:
 
