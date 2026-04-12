@@ -168,9 +168,37 @@ Passo 04:
 ---
 
 ### 💬 Slack
+Passo 01: 
 
-📷 **Configuração Slack (Páginas 12–19)**  
-![Slack](./docs/slack.png)
+![Slack](./docs/Slack01.png)
+
+Passo 02: 
+
+![Slack](./docs/Slack02.png)
+
+Passo 03: 
+
+![Slack](./docs/Slack03.png)
+Passo 04: 
+
+![Slack](./docs/Slack04.png)
+
+Passo 05: 
+
+![Slack](./docs/Slack05.png)
+
+Passo 06: 
+
+![Slack](./docs/Slack06.png)
+
+Passo 07: 
+
+![Slack](./docs/Slack07.png)
+
+Passo 08: 
+
+![Slack](./docs/Slack09.png)
+
 
 - Incoming Webhook
 - Alertas de deploy
