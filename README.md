@@ -157,6 +157,47 @@ Passo 04:
 
 ![Deploy Workflow](./docs/WorkflowDeploy.png)
 
+Passo 01:
+
+![Deploy Workflow](./docs/DeployDocker01.png)
+
+Passo 02:
+
+![Deploy Workflow](./docs/DeployDocker02.png)
+
+Passo 03:
+
+![Deploy Workflow](./docs/DeployDocker04.png)
+
+Passo 04:
+
+![Deploy Workflow](./docs/DeployDocker05.png)
+
+Passo 05:
+
+![Deploy Workflow](./docs/DeployDocker06.png)
+
+Passo 06:
+
+![Deploy Workflow](./docs/DeployDocker07.png)
+
+Passo 07:
+
+![Deploy Workflow](./docs/DeployDocker08.png)
+
+Passo 08:
+
+![Deploy Workflow](./docs/DeployDocker09.png)
+
+Passo 09:
+
+![Deploy Workflow](./docs/DeployDocker10.png)
+
+Passo 10:
+
+![Deploy Workflow](./docs/DeployDocker11.png)
+
+
 ### Etapas:
 
 1. Webhook
