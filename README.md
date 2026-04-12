@@ -330,25 +330,7 @@ Executa:
 - Telegram Bot
 - SMTP (Gmail)
 
----
 
-## 📈 Benefícios
-
-- Deploy automatizado
-- Alta disponibilidade
-- Monitoramento contínuo
-- Alertas em tempo real
-
----
-
-## 📌 Melhorias Futuras
-
-- Kubernetes
-- Prometheus + Grafana
-- Logs centralizados
-- CI/CD avançado com Buildx
-
----
 
 ## 👨‍💻 Autor
 
