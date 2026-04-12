@@ -36,8 +36,7 @@ Este projeto implementa:
 
 ## 🐳 Docker
 
-📷 **Dockerfile (Página 4)**  
-![Dockerfile](./docs/dockerfile.png)
+![Dockerfile](./docs/Dockerfile03.png)
 
 ### Descrição
 
