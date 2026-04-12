@@ -131,7 +131,7 @@ Exemplo:
 
 ## 🔗 Configuração Webhook GitHub
 
-![Webhook](./docs/github-webhook.png)
+![Webhook](./docs/GitHub 01.png)
 
 - Método: POST
 - Evento: Push
