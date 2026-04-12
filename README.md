@@ -211,8 +211,30 @@ Passo 08:
 
 ### 🎮 Discord
 
-📷 **Configuração Discord (Páginas 20–25)**  
-![Discord](./docs/discord.png)
+Passo 1:
+
+![Discord](./docs/Discord01.png)
+
+Passo 2:
+
+![Discord](./docs/Discord02.png)
+
+Passo 3:
+
+![Discord](./docs/Discord03.png)
+
+Passo 4:
+
+![Discord](./docs/Discord04.png)
+
+Passo 5:
+
+![Discord](./docs/Discord05.png)
+
+Passo 6:
+
+![Discord](./docs/Discord06.png)
+
 
 - Webhook por canal
 - Notificações em tempo real
