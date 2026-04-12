@@ -95,12 +95,17 @@ CMD ["python", "app.py"]
 
 ## 📦 Docker Compose
 
-📷 **Docker Compose (Página 5)**  
-![Docker Compose](./docs/docker-compose.png)
+```bash
+version: '3.8'
 
-Responsável por subir e gerenciar os containers.
-
----
+services:
+  flask_app:
+    build: .
+    container_name: flask_app
+    ports:
+      - "8024:8024"
+    restart: always
+```
 
 ## 🌐 Cloudflare Tunnel
 
