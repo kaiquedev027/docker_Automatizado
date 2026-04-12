@@ -177,25 +177,24 @@ Passo 05:
 
 ![Deploy Workflow](./docs/DeployDocker06.png)
 
-Passo 06:
-
 ![Deploy Workflow](./docs/DeployDocker07.png)
 
-Passo 07:
+Passo 06:
 
 ![Deploy Workflow](./docs/DeployDocker08.png)
 
-Passo 08:
-
 ![Deploy Workflow](./docs/DeployDocker09.png)
 
-Passo 09:
+
+Passo 07:
 
 ![Deploy Workflow](./docs/DeployDocker10.png)
 
-Passo 10:
+Passo 08:
 
 ![Deploy Workflow](./docs/DeployDocker11.png)
+
+
 
 
 ### Etapas:
