@@ -110,7 +110,7 @@ services:
 ## 🌐 Cloudflare Tunnel
 
 📷 **Configuração Tunnel (Página 9)**  
-![Cloudflare](./docs/cloudflare.png)
+![Cloudflare](./docs/Cloudflared.png)
 
 - Expõe serviço local
 - Evita uso de IP público
