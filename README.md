@@ -26,6 +26,44 @@ Este projeto implementa:
 ---
 
 ## ⚙️ CI/CD com GitHub Actions
+ **Clone o repositório:**
+    ```bash
+    name: Pipeline Completo
+    
+    on:
+      push:
+        branches:
+          - main
+    
+    jobs:
+      build-and-deploy:
+        runs-on: ubuntu-latest
+    
+        steps:
+          # 1. Clonar código
+          - name: Checkout
+            uses: actions/checkout@v4
+    
+          # 2. Validar Python (opcional, mas TOP)
+          - name: Instalar Python
+            uses: actions/setup-python@v5
+            with:
+              python-version: '3.12'
+    
+          - name: Instalar dependências
+            run: |
+              pip install -r requirements.txt
+    
+          # 3. Teste básico (evita deploy quebrado)
+          - name: Teste rápido
+            run: |
+              python -m py_compile app.py
+    
+          # 4. Disparar seu n8n (AQUI É A CHAVE)
+          - name: Deploy via n8n
+            run: |
+              curl -X POST https://www.retrogamesonline.com.br/webhook/deploy
+    ```
 
 ![Pipeline](./docs/DeployGithub.png)
 
