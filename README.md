@@ -27,7 +27,7 @@ Este projeto implementa:
 
 ## ⚙️ CI/CD com GitHub Actions
  **Clone o repositório:**
-    ```bash
+```bash
     name: Pipeline Completo
     
     on:
