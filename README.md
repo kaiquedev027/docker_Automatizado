@@ -243,8 +243,27 @@ Passo 6:
 
 ### 📧 Email SMTP
 
-📷 **Configuração SMTP (Páginas 26–30)**  
-![SMTP](./docs/smtp.png)
+Passo 01:
+
+![SMTP](./docs/Email01.png)
+
+Passo 02:
+
+![SMTP](./docs/Email02.png)
+
+Passo 03:
+
+![SMTP](./docs/Email03.png)
+
+Passo 04:
+
+![SMTP](./docs/Email04.png)
+
+Passo 05:
+
+![SMTP](./docs/Email05.png)
+
+
 
 - Gmail + senha de app
 - Envio automático de emails
