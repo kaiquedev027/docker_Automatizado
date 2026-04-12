@@ -19,8 +19,7 @@ Este projeto implementa:
 
 ## 🧱 Estrutura do Projeto
 
-📷 **Estrutura do projeto (Página 2)**  
-![Estrutura](./docs/estrutura.png)
+![Estrutura](./docs/estruturadoprojeto.png)
 
 
 
