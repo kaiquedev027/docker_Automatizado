@@ -1,4 +1,4 @@
-# 🚀 Deploy Automatizado com Docker + n8n + Monitoramento
+# 🚀 Deploy Automatizado com Github + Docker + n8n + Monitoramento
 
 Sistema completo de CI/CD com deploy automatizado, monitoramento e notificações em tempo real.
 
