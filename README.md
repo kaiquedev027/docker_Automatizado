@@ -483,7 +483,27 @@ Executa:
 
      Passo 04:
   
-   ![Monitoramento](./docs/DockerPs01.png)
+   ![Monitoramento](./docs/DockerPs04.png)
+
+  
+   ```bash
+    📦 *Docker Container Info*
+    
+    📛 *Nome:* `{{$json.name}}`
+    🆔 *ID:* `{{$json.id}}`
+    
+    🐳 *Imagem:*  
+    `{{$json.image}}`
+    
+    🚀 *Comando:*  
+    `{{$json.command}}`
+    
+    ⏱️ *Uptime:* `{{$json.uptime}}`  
+    🟢 *Status:* `{{$json.status}}`
+    
+    🌐 *Portas:*  
+    `{{$json.ports}}`
+  ```
 - docker logs
   
      Passo 01:
@@ -537,6 +557,18 @@ Executa:
      Passo 04:
   
    ![Monitoramento](./docs/DockerLogs04.png)
+
+  
+   ```bash
+    📊 *Flask Log*
+    
+    {{$json.status}}
+    
+    🌐 *Endpoints:*
+    {{$json.urls.map(u => '🔗 `' + u + '`').join('\n')}}
+    
+    🟢 *Status:* Running
+  ```
 - docker stats
   
      Passo 01:
@@ -580,6 +612,25 @@ Executa:
      Passo 04:
   
    ![Monitoramento](./docs/DockerStats04.png)
+
+  
+   ```bash
+    📦 *Docker Monitor*
+    
+    📛 *Container:* `{{$json.nome}}`
+    
+    ⚙️ *CPU:* `{{$json.cpu}}`  
+    🧠 *Memória:* `{{$json.mem}}`  
+    📊 *Uso:* `{{$json.memPerc}}`
+    
+    🌐 *Rede:*  
+    ⬆️⬇️ `{{$json.net}}`
+    
+    💾 *Disco:*  
+    ⬆️⬇️ `{{$json.block}}`
+    
+    🧵 *Processos:* `{{$json.pids}}`
+  ```
 
 ---
 
