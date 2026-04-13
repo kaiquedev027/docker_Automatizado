@@ -431,6 +431,10 @@ Executa:
   
    ![Monitoramento](./docs/DockerPs02.png)
 
+    ```bash
+       docker ps --filter "name=flask_app" --format "{{.ID}}|{{.Image}}|{{.Command}}|{{.RunningFor}}|{{.Status}}|{{.Ports}}|{{.Names}}"
+    ```
+
      Passo 03:
   
    ![Monitoramento](./docs/DockerPs03.png)
@@ -466,6 +470,11 @@ Executa:
      Passo 02:
   
    ![Monitoramento](./docs/DockerLogs02.png)
+
+    ```bash
+      docker logs flask_app --tail 50
+    ```
+
 
      Passo 03:
   
@@ -514,6 +523,11 @@ Executa:
      Passo 02:
   
    ![Monitoramento](./docs/DockerStats02.png)
+
+   ```bash
+      docker stats flask_app --no-stream --format "{{.Name}}|{{.CPUPerc}}|{{.MemUsage}}|{{.MemPerc}}|{{.NetIO}}|{{.BlockIO}}|{{.PIDs}}"
+    ```
+
 
      Passo 03:
   
