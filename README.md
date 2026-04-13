@@ -634,8 +634,3 @@ Passo 05:
 - Telegram Bot
 - SMTP (Gmail)
 
-
-
-## 👨‍💻 Autor
-
-Kaique Alves Fernandes
