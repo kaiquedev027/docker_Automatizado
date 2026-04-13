@@ -173,11 +173,59 @@ Passo 04:
 
 ![Deploy Workflow](./docs/DeployDocker05.png)
 
+```bash
+    const log = ($json.stdout || "") + "\n" + ($json.stderr || "");
+
+    // captura URLs (http e https)
+    const urls = log.match(/https?:\/\/[^\s]+/g) || [];
+    
+    // detecta status
+    let status = "🟢 Running";
+    
+    if (log.includes("WARNING")) status = "⚠️ Warning";
+    if (log.includes("Error")) status = "❌ Error";
+    
+    // mensagem
+    let message;
+    
+    if (urls.length === 0) {
+      message = "⚠️ Nenhum endpoint detectado ainda";
+    } else {
+      message = urls.map(u => '🔗 `' + u + '`').join('\n');
+    }
+    
+    return [{
+      json: {
+        status,
+        urls,
+        message,
+        log
+      }
+    }];
+```
+
 Passo 05:
 
 ![Deploy Workflow](./docs/DeployDocker06.png)
 
 ![Deploy Workflow](./docs/DeployDocker07.png)
+
+```bash
+    {{
+    "🚀 Deploy realizado com sucesso!\n" +
+    "📦 App Publicado\n" +
+    "🕒 " + new Date().toLocaleString("pt-BR")  +
+    "\n" + "--------------------------//------------------//------------------"
+    }}
+    📊 *Flask Log*
+    
+    {{$json.status}}
+    
+    🌐 *Endpoints:*
+    {{$json.urls.map(u => '🔗 `' + u + '`').join('\n')}}
+    
+    🟢 *Status:* Running
+```
 
 Passo 06:
 
