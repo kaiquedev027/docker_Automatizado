@@ -334,6 +334,7 @@ Passo 03:
 Executa:
 
 - docker ps
+  
     Passo 01:
   
    ![Monitoramento](./docs/DockerPs01.png)
@@ -350,6 +351,7 @@ Executa:
   
    ![Monitoramento](./docs/DockerPs01.png)
 - docker logs
+  
      Passo 01:
   
    ![Monitoramento](./docs/DockerLogs01.png)
@@ -366,6 +368,7 @@ Executa:
   
    ![Monitoramento](./docs/DockerLogs04.png)
 - docker stats
+  
      Passo 01:
   
    ![Monitoramento](./docs/DockerStats01.png)
