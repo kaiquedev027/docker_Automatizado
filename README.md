@@ -121,8 +121,18 @@ services:
 Definindo Variavel para Fixar o Dominio no N8N:
 ![Env](./docs/VariavelDominioN8N.png)
 
+   ```bash
+     [System.Environment]::SetEnvironmentVariable("WEBHOOK_URL", "https://www.retrogamesonline.com.br", "User")
+   ```
+
+
 Definindo Variavel para Executar somente Comando Git Deploy:
 ![Env](./docs/VariavelGithubDeploy.png)
+
+   ```bash
+     git config --global alias.deploy '!git add . && git commit -m "deploy" && git push'    
+   ```
+
 
 Exemplo:
 
@@ -580,6 +590,10 @@ Passo 02:
 Passo 03:
 
 ![Restart](./docs/DockerRestart03.png)
+
+ ```bash
+     {{ $json["stdout"].replace(/[^a-z]/gi, '').toLowerCase() === "false" }}
+ ```
 
 Passo 04:
 
