@@ -435,6 +435,25 @@ Executa:
   
    ![Monitoramento](./docs/DockerPs03.png)
 
+   ```bash
+    const raw = $json.stdout.trim();
+
+    const data = raw.split("|");
+    return [
+      {
+      json: {
+        id: data[0],
+        image: data[1],
+        command: data[2],
+        uptime: data[3],
+        status: data[4],
+        ports: data[5],
+        name: data[6]
+      }
+      }
+    ];
+  ```
+
      Passo 04:
   
    ![Monitoramento](./docs/DockerPs01.png)
@@ -452,6 +471,37 @@ Executa:
   
    ![Monitoramento](./docs/DockerLogs03.png)
 
+   ```bash
+    const log = ($json.stdout || "") + "\n" + ($json.stderr || "");
+
+    // captura URLs (http e https)
+    const urls = log.match(/https?:\/\/[^\s]+/g) || [];
+    
+    // detecta status
+    let status = "🟢 Running";
+    
+    if (log.includes("WARNING")) status = "⚠️ Warning";
+    if (log.includes("Error")) status = "❌ Error";
+    
+    // mensagem
+    let message;
+    
+    if (urls.length === 0) {
+      message = "⚠️ Nenhum endpoint detectado ainda";
+    } else {
+      message = urls.map(u => '🔗 `' + u + '`').join('\n');
+    }
+    
+    return [{
+      json: {
+        status,
+        urls,
+        message,
+        log
+      }
+    }];
+  ```
+
      Passo 04:
   
    ![Monitoramento](./docs/DockerLogs04.png)
@@ -468,6 +518,26 @@ Executa:
      Passo 03:
   
    ![Monitoramento](./docs/DockerStats03.png)
+
+   ```bash
+   const raw = $json.stdout.trim();
+
+    const data = raw.split("|");
+    
+    return [
+      {
+        json: {
+          nome: data[0],
+          cpu: data[1],
+          mem: data[2],
+          memPerc: data[3],
+          net: data[4],
+          block: data[5],
+          pids: data[6]
+        }
+      }
+    ];
+  ```
 
 
      Passo 04:
