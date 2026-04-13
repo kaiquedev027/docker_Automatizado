@@ -344,6 +344,25 @@ Executa:
 
 ### Lógica:
 
+Passo 01:
+
+![Restart](./docs/DockerRestart01.png)
+
+Passo 02:
+
+![Restart](./docs/DockerRestart02.png)
+
+Passo 03:
+
+![Restart](./docs/DockerRestart03.png)
+
+Passo 04:
+
+![Restart](./docs/DockerRestart04.png)
+
+Passo 05:
+
+![Restart](./docs/DockerRestart05.png)
 
 ---
 
