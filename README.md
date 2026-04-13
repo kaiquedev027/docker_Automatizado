@@ -238,9 +238,49 @@ Passo 07:
 
 ![Deploy Workflow](./docs/DeployDocker10.png)
 
+```bash
+   {{
+    {
+      content: `🚀 Deploy realizado com sucesso!
+    📦 App Publicado
+    🕒 ${new Date().toLocaleString("pt-BR")}
+    --------------------------
+    
+    📊 *Flask Log*
+    
+    ${$json.status}
+    
+    🌐 *Endpoints:*
+    ${($json.urls || []).map(u => '🔗 `' + u + '`').join('\n')}
+    
+    🟢 *Status:* Running`
+    }
+    }}
+```
+
 Passo 08:
 
 ![Deploy Workflow](./docs/DeployDocker11.png)
+
+```bash
+    {{
+    {
+      content: `🚀 Deploy realizado com sucesso!
+    📦 App Publicado
+    🕒 ${new Date().toLocaleString("pt-BR")}
+    --------------------------
+    
+    📊 *Flask Log*
+    
+    ${$json.status}
+    
+    🌐 *Endpoints:*
+    ${($json.urls || []).map(u => '🔗 `' + u + '`').join('\n')}
+    
+    🟢 *Status:* Running`
+    }
+    }}
+```
 
 
 
