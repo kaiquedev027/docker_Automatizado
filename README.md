@@ -175,9 +175,14 @@ Passo 02:
 
 ![Deploy Workflow](./docs/DeployDocker02.png)
 
+```bash
+    cd "C:\Users\Kaique\Documents\FerramentadePublicacaoConteudo" && git pull origin main && docker-compose down && docker-compose up -d --build
+```
+
 Passo 03:
 
 ![Deploy Workflow](./docs/DeployDocker04.png)
+
 
 Passo 04:
 
