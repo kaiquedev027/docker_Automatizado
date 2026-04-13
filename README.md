@@ -573,6 +573,10 @@ Passo 02:
 
 ![Restart](./docs/DockerRestart02.png)
 
+  ```bash
+      docker inspect -f '{{.State.Running}}' flask_app
+  ```
+
 Passo 03:
 
 ![Restart](./docs/DockerRestart03.png)
@@ -584,6 +588,10 @@ Passo 04:
 Passo 05:
 
 ![Restart](./docs/DockerRestart05.png)
+
+  ```bash
+      docker start flask_app
+  ```
 
 ---
 
