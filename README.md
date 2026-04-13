@@ -165,6 +165,8 @@ Passo 04:
 
 ## 🤖 Workflow de Deploy (n8n)
 
+## 🚀 Fluxo Completo
+
 ![Deploy Workflow](./docs/WorkflowDeploy.png)
 
 Passo 01:
@@ -438,6 +440,8 @@ Passo 03:
 
 ![Monitoramento](./docs/WorkflowPsLogsStats.png)
 
+## 🚀 Fluxo Completo
+
 Executa:
 
 - docker ps
@@ -582,7 +586,7 @@ Executa:
 ## 🔄 Auto Healing (Restart automático)
 ![Restart](./docs/WorkflowRestartDocker.png)
 
-### Lógica:
+## 🚀 Fluxo Completo
 
 Passo 01:
 
@@ -617,13 +621,6 @@ Passo 05:
   ```
 
 ---
-
-## 🚀 Fluxo Completo
-
-
-
----
-
 ## 🧠 Tecnologias Utilizadas
 
 - Docker
