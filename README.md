@@ -183,6 +183,10 @@ Passo 03:
 
 ![Deploy Workflow](./docs/DeployDocker04.png)
 
+```bash
+   docker logs flask_app --tail 50
+```
+
 
 Passo 04:
 
