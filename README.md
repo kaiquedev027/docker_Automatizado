@@ -334,8 +334,54 @@ Passo 03:
 Executa:
 
 - docker ps
+    Passo 01:
+  
+   ![Monitoramento](./docs/DockerPs01.png)
+
+     Passo 02:
+  
+   ![Monitoramento](./docs/DockerPs02.png)
+
+     Passo 03:
+  
+   ![Monitoramento](./docs/DockerPs03.png)
+
+     Passo 04:
+  
+   ![Monitoramento](./docs/DockerPs01.png)
 - docker logs
+     Passo 01:
+  
+   ![Monitoramento](./docs/DockerLogs01.png)
+
+     Passo 02:
+  
+   ![Monitoramento](./docs/DockerLogs02.png)
+
+     Passo 03:
+  
+   ![Monitoramento](./docs/DockerLogs03.png)
+
+     Passo 04:
+  
+   ![Monitoramento](./docs/DockerLogs04.png)
 - docker stats
+     Passo 01:
+  
+   ![Monitoramento](./docs/DockerStats01.png)
+
+     Passo 02:
+  
+   ![Monitoramento](./docs/DockerStats02.png)
+
+     Passo 03:
+  
+   ![Monitoramento](./docs/DockerStats03.png)
+
+
+     Passo 04:
+  
+   ![Monitoramento](./docs/DockerStats04.png)
 
 ---
 
