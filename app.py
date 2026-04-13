@@ -17,11 +17,11 @@ import os
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 SMTP_USERNAME = 'qrcodemastercombr@gmail.com'  # Substitua pelo seu email
-SMTP_PASSWORD = 'xxlh iwcq pxez bwvn'  # Substitua pela sua senha
+SMTP_PASSWORD = ''  # Substitua pela sua senha
 
 
 app = Flask(__name__)
-app.secret_key = 'c324e85fce3df8bbb53be952ca0475dead443e8490adf2bf'
+app.secret_key = ''
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'static/images'  # Pasta para armazenar imagens
@@ -55,7 +55,7 @@ def send_email(subject, body, to_emails):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     smtp_username = 'qrcodemastercombr@gmail.com'
-    smtp_password = 'xxlh iwcq pxez bwvn'
+    smtp_password = ''
 
     msg = MIMEText(body)
     msg['Subject'] = subject
