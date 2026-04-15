@@ -357,6 +357,10 @@ Passo 08:
 
 ---
 
+##  🔔 Notificação em Tempo Real Slack:
+
+![Slack](./docs/NotificacaoSlack.png)
+
 ### 🎮 Discord
 
 Passo 1:
