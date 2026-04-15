@@ -357,7 +357,7 @@ Passo 08:
 
 ---
 
-##  🔔 Notificação em Tempo Real Slack:
+##  🔔 Notificação em Tempo Real no Slack:
 
 ![Slack](./docs/NotificacaoSlack.png)
 
@@ -392,6 +392,11 @@ Passo 6:
 - Notificações em tempo real
 
 ---
+
+🔔 Notificação em Tempo Real no Discord:
+
+![Discord](./docs/NotificacaoDiscord.png)
+
 
 ### 📧 Email SMTP
 
@@ -439,6 +444,9 @@ Passo 03:
 - Notificações diretas
 
 ---
+🔔 Notificação em Tempo Real no Telegram:
+
+![Telegram](./docs/NotificacaoTelegram.png)
 
 ## 📊 Monitoramento de Containers
 
