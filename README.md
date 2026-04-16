@@ -430,9 +430,13 @@ Passo 05:
 ### 📱 Telegram
 Passo 01:
 
+ChatId:https://t.me/ChatidTelegramBot
+
 ![Telegram](./docs/Telegram01.png)
 
 Passo 02:
+
+BotFather:https://t.me/BotFather
 
 ![Telegram](./docs/Telegram02.png)
 
