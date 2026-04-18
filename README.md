@@ -146,7 +146,7 @@ Para garantir o funcionamento correto dos webhooks em ambiente externo, foi defi
 
 ```powershell
 [System.Environment]::SetEnvironmentVariable("WEBHOOK_URL", "https://www.retrogamesonline.com.br", "User")
-```bash
+
 ![Env](./docs/VariavelDominioN8N.png)
 
      [System.Environment]::SetEnvironmentVariable("WEBHOOK_URL", "https://www.retrogamesonline.com.br", "User")
