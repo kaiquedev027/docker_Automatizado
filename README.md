@@ -140,7 +140,12 @@ services:
 ---
 
 ## 🔐 Variáveis de Ambiente
-Definindo Variavel para Fixar o Dominio no N8N:
+## 🌐 Definição da variável WEBHOOK_URL no n8n
+
+Para garantir o funcionamento correto dos webhooks em ambiente externo, foi definida a variável de ambiente `WEBHOOK_URL`:
+
+```powershell
+[System.Environment]::SetEnvironmentVariable("WEBHOOK_URL", "https://www.retrogamesonline.com.br", "User")
 ![Env](./docs/VariavelDominioN8N.png)
 
    ```bash
