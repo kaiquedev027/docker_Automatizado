@@ -24,6 +24,29 @@ Este projeto implementa:
 
 
 ---
+## 🚀 Pipeline de Deploy Automatizado
+
+Este pipeline foi desenvolvido para automatizar todo o processo de **validação e deploy da aplicação**, utilizando GitHub Actions como ferramenta de CI e o n8n como orquestrador do deploy.
+
+A cada alteração enviada para a branch `main`, o pipeline é automaticamente acionado, executando as seguintes etapas:
+
+- 🔄 Clonagem do repositório
+- 🐍 Configuração do ambiente Python
+- 📦 Instalação das dependências
+- ✅ Validação básica do código
+- 🚀 Disparo do deploy via webhook
+
+Diferente de pipelines tradicionais, o deploy não é executado diretamente no GitHub Actions.  
+Em vez disso, é feita uma requisição HTTP para um webhook do n8n, que é responsável por:
+
+- Executar os comandos Docker
+- Subir ou atualizar os containers
+- Verificar o status da aplicação
+- Enviar notificações em tempo real
+
+Essa abordagem garante maior flexibilidade, desacoplamento e controle sobre o processo de deploy.
+
+Abaixo está a configuração completa do pipeline:
 
 ## ⚙️ CI/CD com GitHub Actions
 ```bash
