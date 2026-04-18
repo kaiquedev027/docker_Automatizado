@@ -162,8 +162,6 @@ git config --global alias.deploy '!git add . && git commit -m "deploy" && git pu
 ![Env](./docs/VariavelGithubDeploy.png)
 
 
-Exemplo:
-
 
 ---
 
