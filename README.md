@@ -151,12 +151,15 @@ Para garantir o funcionamento correto dos webhooks em ambiente externo, foi defi
 ![Env](./docs/VariavelDominioN8N.png)
 
 
-Definindo Variavel para Executar somente Comando Git Deploy:
-![Env](./docs/VariavelGithubDeploy.png)
+## ⚡ Alias Git para Deploy Rápido
 
-   ```bash
-     git config --global alias.deploy '!git add . && git commit -m "deploy" && git push'    
-   ```
+Para simplificar o processo de envio de alterações e disparo do pipeline de deploy, foi criado um alias global no Git:
+
+```bash
+git config --global alias.deploy '!git add . && git commit -m "deploy" && git push'
+```
+
+![Env](./docs/VariavelGithubDeploy.png)
 
 
 Exemplo:
