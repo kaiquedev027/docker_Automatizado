@@ -24,11 +24,12 @@ Este projeto implementa:
 
 
 ---
+
 ## 🚀 Pipeline de Deploy Automatizado
 
-Este pipeline foi desenvolvido para automatizar todo o processo de **validação e deploy da aplicação**, utilizando GitHub Actions como ferramenta de CI e o n8n como orquestrador do deploy.
+Este pipeline foi desenvolvido para automatizar todo o processo de **validação e deploy da aplicação**, utilizando o GitHub Actions como ferramenta de CI e o n8n como orquestrador do processo de deploy.
 
-A cada alteração enviada para a branch `main`, o pipeline é automaticamente acionado, executando as seguintes etapas:
+A cada alteração enviada para a branch `main`, o pipeline é automaticamente acionado e executa as seguintes etapas:
 
 - 🔄 Clonagem do repositório
 - 🐍 Configuração do ambiente Python
@@ -36,15 +37,13 @@ A cada alteração enviada para a branch `main`, o pipeline é automaticamente a
 - ✅ Validação básica do código
 - 🚀 Disparo do deploy via webhook
 
-Diferente de pipelines tradicionais, o deploy não é executado diretamente no GitHub Actions.  
-Em vez disso, é feita uma requisição HTTP para um webhook do n8n, que é responsável por:
+Diferente de pipelines tradicionais, o deploy não é executado diretamente no GitHub Actions.
 
-- Executar os comandos Docker
-- Subir ou atualizar os containers
-- Verificar o status da aplicação
-- Enviar notificações em tempo real
+Em vez disso, é realizada uma requisição **HTTPS** para um webhook do n8n, garantindo comunicação segura (TLS) entre o pipeline e o ambiente de automação.
 
-Essa abordagem garante maior flexibilidade, desacoplamento e controle sobre o processo de deploy.
+O endpoint é exposto publicamente por meio do Cloudflare Tunnel, enquanto o n8n permanece em execução local, mantendo a arquitetura **segura, desacoplada e independente da infraestrutura externa**.
+
+Essa abordagem permite maior flexibilidade, controle e escalabilidade no processo de deploy.
 
 Abaixo está a configuração completa do pipeline:
 
